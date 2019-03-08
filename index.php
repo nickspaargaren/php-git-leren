@@ -5,7 +5,7 @@ $base = "//".$_SERVER['HTTP_HOST']."/"; // {BASISDIR}, soort van.
 
 // Database gegevens
 $db_hostname = 'localhost';
-$db_database = 'gitleren';
+$db_database = 'test';
 $db_userid   = 'root';
 $db_password = 'root';
 
@@ -13,16 +13,13 @@ $db_password = 'root';
 $mysqli = new mysqli($db_hostname, $db_userid, $db_password, $db_database);
 
 // Gebruiker gegevens ophalen (In dit geval gebruiker #1, Marit)
-$gebruikerQuery = $mysqli->query('SELECT id, naam, leeftijd FROM gebruikers WHERE id=1');
-
+$gebruikerQuery = $mysqli->query('SELECT id, naam FROM gebruikers WHERE id=1');
 $gebruiker = $gebruikerQuery->fetch_assoc();
 
 // Stel er is hierboven voor Marit (gebruiker #1) gekozen
 if($gebruiker['id'] == 1){
     $background = 'style="background-color: pink;"';
-}
-
-if($gebruiker['id'] == 3){
+} elseif ($gebruiker['id'] == 3) {
     $background = 'style="background-color: black;"';
 }
 
@@ -34,7 +31,7 @@ if($gebruiker['id'] == 3){
     </head>
     <body <?php echo $background; ?>>
         <?php
-        echo '<h1 class="titel">Hallo, '.$gebruiker['naam'].' <span>(#'.$gebruiker['id']. ')</span></h1> <h2> '.$gebruiker['leeftijd'].'</h2>';
+        echo '<h1 class="titel">Hallo, '.$gebruiker['naam'].' <span>(#'.$gebruiker['id']. ')</span></h1>';
         ?>
     </body>
 </html>
