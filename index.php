@@ -15,7 +15,7 @@ $mysqli = new mysqli($db_hostname, $db_userid, $db_password, $db_database);
 // Gebruiker gegevens ophalen (In dit geval gebruiker #1, Marit)
 $gebruikerQuery = $mysqli->query('SELECT id, naam FROM gebruikers WHERE id=1');
 $gebruiker = $gebruikerQuery->fetch_assoc();
-
+vv
 // Stel er is hierboven voor Marit (gebruiker #1) gekozen
 if($gebruiker['id'] == 1){
     $background = 'style="background-color: pink;"';
