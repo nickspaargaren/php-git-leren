@@ -19,8 +19,8 @@ $gebruiker = $gebruikerQuery->fetch_assoc();
 // Stel er is hierboven voor Marit (gebruiker #1) gekozen
 if($gebruiker['id'] == 1){
     $background = 'style="background-color: pink;"';
-} elseif ($gebruiker['id'] == 3) {
-    $background = 'style="background-color: black;"';
+} elseif ($gebruiker['id'] == 2) {
+    $background = 'style="background-color: green;"';
 }
 
 ?>
