@@ -31,7 +31,7 @@ if($gebruiker['id'] == 1){
     </head>
     <body <?php echo $background; ?>>
         <?php
-        echo '<h1 class="titel">Hallo, '.$gebruiker['naam'].' <span>(#'.$gebruiker['id']. ')</span></h1>';
+        echo '<h1 class="titel">Hallo, '.$gebruiker['naam'].' <span>(#'.$gebruiker['id']. ')</span></h1><p>Dankzij Nick kan ik nu weer verder, YES!</p>';
         ?>
     </body>
 </html>
