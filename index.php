@@ -20,7 +20,7 @@ $gebruiker = $gebruikerQuery->fetch_assoc();
 if($gebruiker['id'] == 1){
     $background = 'style="background-color: pink;"';
 } elseif ($gebruiker['id'] == 2) {
-    $background = 'style="background-color: green;"';
+    $background = 'style="background-color: paars;"';
 }
 
 ?>
